@@ -13,17 +13,17 @@ public class Exercise_6_54_2 extends Exercise {
     private static final int maxValue = 20;
     
     public Exercise_6_54_2() {
-        super("Exercício mód. 6 aula 54 nro. 2");
+        super("Exercise mod. 6 lesson 54 num. 2");
     }
 
     @Override
     public void execute() {
         int in = 0;
         int out = 0;
-        System.out.println("Digite um valor inteiro:");
+        System.out.println("Enter an integer number:");
         int n = Main.sc.nextInt();
         Main.sc.nextLine();
-        System.out.printf("Agora informe %d valores inteiros: %n", n);
+        System.out.printf("Now enter %d integer numbers: %n", n);
         int val = 0;
         for(int i = 0; i < n; i++) {
             val = Main.sc.nextInt();
@@ -33,7 +33,7 @@ public class Exercise_6_54_2 extends Exercise {
                 out++;
             }
         }
-        System.out.printf("Destes valores %d estão dentro e %d estão fora do intervalo %d - %d %n", in, out, minValue, maxValue);
+        System.out.printf("From these numbers %d are in and %d are out of %d - %d interval %n", in, out, minValue, maxValue);
     }
     
 }

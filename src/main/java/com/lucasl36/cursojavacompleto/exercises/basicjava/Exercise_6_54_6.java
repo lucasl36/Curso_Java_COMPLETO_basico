@@ -10,13 +10,13 @@ import com.lucasl36.cursojavacompleto.exercises.Exercise;
 public class Exercise_6_54_6 extends Exercise {
         
     public Exercise_6_54_6() {
-        super("Exercício mód. 6 aula 54 nro. 6");
+        super("Exercise mod. 6 lesson 54 num. 6");
     }
 
     @Override
     public void execute() {
-        System.out.println("* Cálculo de divisores");
-        System.out.println("Digite um valor inteiro: ");
+        System.out.println("* Divisors Calculation");
+        System.out.println("Enter an integer number: ");
         int val = Main.sc.nextInt();
         Main.sc.nextLine();
         for(int i = 1; i <= val; i++) {

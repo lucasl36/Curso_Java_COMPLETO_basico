@@ -10,18 +10,18 @@ import com.lucasl36.cursojavacompleto.exercises.Exercise;
 public class Exercise_5_37_2 extends Exercise {
     
     public Exercise_5_37_2() {
-        super("Exercício mód. 5 aula 37 nro. 2");
+        super("Exercise mod. 5 lesson 37 num. 2");
     }
     
     @Override
     public void execute() {
-        System.out.print("Digite um número inteiro: ");
-        int nro = Main.sc.nextInt();
+        System.out.print("Enter an integer number: ");
+        int num = Main.sc.nextInt();
         Main.sc.nextLine();
-        if(nro % 2 == 0) {
-            System.out.println("Este número é PAR");
+        if(num % 2 == 0) {
+            System.out.println("This number is EVEN");
         } else {
-            System.out.println("Este número é IMPAR");
+            System.out.println("This number is ODD");
         }
     }
     

@@ -10,26 +10,26 @@ import com.lucasl36.cursojavacompleto.exercises.Exercise;
 public class Exercise_4_31_5 extends Exercise {
 
     public Exercise_4_31_5() {
-        super("Exercício mód. 4 aula 31 nro. 5");
+        super("Exercise mod. 4 lesson 31 num. 5");
     }
     
     @Override
     public void execute() {
-        System.out.println("Digite o código, a quantidade e o valor da primeira peça separados por espaço:");
-        int pc1Codigo = Main.sc.nextInt();
-        int pc1Quantidade = Main.sc.nextInt();
-        double pc1Valor = Main.sc.nextDouble();
+        System.out.println("Enter the code, quantity and value of the first part separated by space:");
+        int pt1Code = Main.sc.nextInt();
+        int pt1Quantity = Main.sc.nextInt();
+        double pt1Value = Main.sc.nextDouble();
         Main.sc.nextLine();
-        System.out.println("Digite o código, a quantidade e o valor da segunda peça separados por espaço:");
-        int pc2Codigo = Main.sc.nextInt();
-        int pc2Quantidade = Main.sc.nextInt();
-        double pc2Valor = Main.sc.nextDouble();
+        System.out.println("Enter the code, quantity and value of the second part separated by space:");
+        int pt2Code = Main.sc.nextInt();
+        int pt2Quantity = Main.sc.nextInt();
+        double pt2Value = Main.sc.nextDouble();
         Main.sc.nextLine();
-        System.out.printf("O valor a ser pago em ambas as peças de código %d e %d é de: $%.2f%n", pc1Codigo, pc2Codigo, (this.calcularValorPc(pc1Quantidade,pc1Valor) + this.calcularValorPc(pc2Quantidade,pc2Valor)));
+        System.out.printf("The amount to be paid in both parts of codes %d and %d is: $%.2f%n", pt1Code, pt2Code, (this.calculatePartValue(pt1Quantity,pt1Value) + this.calculatePartValue(pt2Quantity,pt2Value)));
     }
     
-    private double calcularValorPc(int qtd, double vlr) {
-        return (double) qtd * vlr;
+    private double calculatePartValue(int quantity, double value) {
+        return (double) quantity * value;
     }
     
 }

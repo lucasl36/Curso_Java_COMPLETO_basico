@@ -10,20 +10,20 @@ import com.lucasl36.cursojavacompleto.exercises.Exercise;
 public class Exercise_5_37_1 extends Exercise {
     
     public Exercise_5_37_1() {
-        super("Exercício mód. 5 aula 37 nro. 1");
+        super("Exercise mod. 5 lesson 37 num. 1");
     }
     
     @Override
     public void execute() {
-        System.out.print("Digite um número inteiro: ");
-        int nro = Main.sc.nextInt();
+        System.out.print("Enter an integer number: ");
+        int num = Main.sc.nextInt();
         Main.sc.nextLine();
-        if(nro > 0) {
-            System.out.println("Este número é POSITIVO");
-        } else if (nro == 0) {
-            System.out.println("Este número é ZERO");
-        } else if (nro < 0) {
-            System.out.println("Este número é NEGATIVO");
+        if(num > 0) {
+            System.out.println("This number is POSITIVE");
+        } else if (num == 0) {
+            System.out.println("This number is ZERO");
+        } else if (num < 0) {
+            System.out.println("This number is NEGATIVE");
         }
     }
     

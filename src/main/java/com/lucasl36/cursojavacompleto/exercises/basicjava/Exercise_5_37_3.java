@@ -10,12 +10,12 @@ import com.lucasl36.cursojavacompleto.exercises.Exercise;
 public class Exercise_5_37_3 extends Exercise {
     
     public Exercise_5_37_3() {
-        super("Exercício mód. 5 aula 37 nro. 3");
+        super("Exercise mod. 5 lesson 37 num. 3");
     }
     
     @Override
     public void execute() {
-        System.out.print("Digite dois números inteiros separados por um espaço: ");
+        System.out.print("Enter two integer numbers separated by space: ");
         int a = Main.sc.nextInt();
         int b = Main.sc.nextInt();
         Main.sc.nextLine();
@@ -25,9 +25,9 @@ public class Exercise_5_37_3 extends Exercise {
             a = temp;
         }
         if(b % a == 0) {
-            System.out.println("Estes números SÃO MÚLTIPLOS!");
+            System.out.println("This numbers are MULTIPLE!");
         } else {
-            System.out.println("Estes números NÃO SÃO MÚLTIPLOS!");
+            System.out.println("This numbers are NOT MULTIPLE!");
         }
     }
     

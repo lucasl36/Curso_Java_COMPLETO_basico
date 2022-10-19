@@ -10,28 +10,28 @@ import com.lucasl36.cursojavacompleto.exercises.Exercise;
 public class Exercise_5_37_4 extends Exercise {
     
     public Exercise_5_37_4() {
-        super("Exercício mód. 5 aula 37 nro. 4");
+        super("Exercise mod. 5 lesson 37 num. 4");
     }
     
     @Override
     public void execute() {
-        System.out.print("Digite dois números inteiros,\n"
-                + "correspondentes as horas de um dia (0 até 24),\n"
-                + "separados por um espaço: ");
-        int hora1 = Main.sc.nextInt();
-        int hora2 = Main.sc.nextInt();
+        System.out.print("Enter two integer numbers,\n"
+                + "corresponding to the hours of the day (0 til 24),\n"
+                + "separated by space: ");
+        int hour1 = Main.sc.nextInt();
+        int hour2 = Main.sc.nextInt();
         Main.sc.nextLine();
-        if(hora1 == hora2) {
-            System.out.println("Há um intervalo de 24 horas entre os números.");
+        if(hour1 == hour2) {
+            System.out.println("There is a 24 hour interval between these numbers.");
         } else {
-            int intervalo = 0;
-            if(hora1 > hora2) {
-                intervalo = (24-hora1)+hora2;
+            int interval = 0;
+            if(hour1 > hour2) {
+                interval = (24-hour1)+hour2;
             } else {
-                intervalo = hora2 - hora1;
+                interval = hour2 - hour1;
             }
-            String s = intervalo > 1 ? "horas" : "hora";
-            System.out.println("Há um intervalo de " + intervalo + " " + s + " entre os números.");
+            String s = interval > 1 ? "hours" : "hour";
+            System.out.println("There is an interval of " + interval + " " + s + " between these numbers.");
         }
     }
     

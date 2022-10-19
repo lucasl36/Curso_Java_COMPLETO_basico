@@ -9,7 +9,7 @@ import com.lucasl36.cursojavacompleto.exercises.Exercise;
 public class Exercise_4_24 extends Exercise {
 
     public Exercise_4_24() {
-        super("Exercício mód. 4 aula 24");
+        super("Exercise mod. 4 lesson 24");
     }
     
     @Override

@@ -10,28 +10,28 @@ import com.lucasl36.cursojavacompleto.exercises.Exercise;
 public class Exercise_4_31_6 extends Exercise {
 
     public Exercise_4_31_6() {
-        super("Exercício mód. 4 aula 31 nro. 6");
+        super("Exercise mod. 4 aula 31 nro. 6");
     }
     
     @Override
     public void execute() {
         double pi = 3.14159;
-        System.out.println("Digite 3 valores decimais de no máximo dupla precisão separados por espaço:");
+        System.out.println("Enter 3 decimal values of double precision maximum:");
         float a = Main.sc.nextFloat();
         float b = Main.sc.nextFloat();
         float c = Main.sc.nextFloat();
         Main.sc.nextLine();
-        double areaTriangulo = a*c/2;
-        double areaCirculo = pi*Math.pow(c, 2);
-        double areaTrapezio = (a+b)*c/2;
-        double areaQuadrado = Math.pow(b, 2);
-        double areaRetangulo = a*b;
-        System.out.println("Estas são as áreas das respectivas figuras geométricas:");
-        System.out.printf("Triângulo: %.3f%n", areaTriangulo);
-        System.out.printf("Círculo: %.3f%n", areaCirculo);
-        System.out.printf("Trapézio: %.3f%n", areaTrapezio);
-        System.out.printf("Quadrado: %.3f%n", areaQuadrado);
-        System.out.printf("Retângulo: %.3f%n", areaRetangulo);
+        double triangleArea = a*c/2;
+        double circleArea = pi*Math.pow(c, 2);
+        double trapezeArea = (a+b)*c/2;
+        double squareArea = Math.pow(b, 2);
+        double rectangleArea = a*b;
+        System.out.println("These are the areas of the respective geometrical figures:");
+        System.out.printf("Triangle: %.3f%n", triangleArea);
+        System.out.printf("Circle: %.3f%n", circleArea);
+        System.out.printf("Trapeze: %.3f%n", trapezeArea);
+        System.out.printf("Square: %.3f%n", squareArea);
+        System.out.printf("Rectangle: %.3f%n", rectangleArea);
     }
     
 }

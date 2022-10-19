@@ -13,16 +13,16 @@ public class Exercise_6_54_1 extends Exercise {
     private static final int maxValue = 1000;
     
     public Exercise_6_54_1() {
-        super("Exercício mód. 6 aula 54 nro. 1");
+        super("Exercise mod. 6 lesson 54 num. 1");
     }
 
     @Override
     public void execute() {
-        System.out.printf("Digite um valor inteiro cujo valor esteja entre %d e %d: %n", minValue, maxValue);
-        int val = Main.sc.nextInt();
+        System.out.printf("Enter an integer number which it's value is between %d amd %d: %n", minValue, maxValue);
+        int value = Main.sc.nextInt();
         Main.sc.nextLine();
-        System.out.printf("Exibindo os números impares de %d até %d... %n", minValue, val);
-        for(int i = minValue; i <= val; i++) {
+        System.out.printf("Showing odd numbers between %d until %d... %n", minValue, value);
+        for(int i = minValue; i <= value; i++) {
             if(i%2 != 0) {
                 System.out.println(i);
             }

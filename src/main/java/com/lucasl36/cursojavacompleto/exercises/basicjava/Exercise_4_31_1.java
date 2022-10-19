@@ -10,18 +10,18 @@ import com.lucasl36.cursojavacompleto.exercises.Exercise;
 public class Exercise_4_31_1 extends Exercise {
 
     public Exercise_4_31_1() {
-        super("Exercício mód. 4 aula 31 nro. 1");
+        super("Exercise mod. 4 lesson 31 num. 1");
     }
     
     @Override
     public void execute() {
-        System.out.println("Digite um valor inteiro A:");                
+        System.out.println("Enter an integer value A:");                
         int a = Main.sc.nextInt();
         Main.sc.nextLine();
-        System.out.println("Digite o valor inteiro B:");
+        System.out.println("Enter an integer value B:");
         int b = Main.sc.nextInt();
         Main.sc.nextLine();
-        System.out.println("A soma dos valores A e B é: " + (a + b));
+        System.out.println("The sum of values A and B is: " + (a + b));
     }
     
 }

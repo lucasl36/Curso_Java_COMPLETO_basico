@@ -10,30 +10,30 @@ import com.lucasl36.cursojavacompleto.exercises.Exercise;
 public class Exercise_6_49_2 extends Exercise {
     
     public Exercise_6_49_2() {
-        super("Exercício mód. 6 aula 49 nro. 2");
+        super("Exercise mod. 6 lesson 49 num. 2");
     }
     
     @Override
     public void execute() {
-        System.out.println("Escreva dois inteiros separados por espaço");
-        System.out.println("Que representam coordenadas num plano cartesiano:");
-        System.out.println("O sistema irá parar apenas quando alguma delas for 0.");
+        System.out.println("Enter two integer numbers separated by space.");
+        System.out.println("These numbers represent coordinates on a cartesian plane.");
+        System.out.println("The system will stop when any of these numbers is 0.");
         int x = 0, y = 0;
         do {
            x = Main.sc.nextInt();
            y = Main.sc.nextInt();
            Main.sc.nextLine();
            if(x > 0 && y > 0) {
-               System.out.println("As coordenadas se encontram no 1º quadrante");
+               System.out.println("The coordinates are located in the 1st quadrant");
            } else if(x > 0 && y < 0) {
-               System.out.println("As coordenadas se encontram no 4º quadrante");
+               System.out.println("The coordinates are located in the 4th quadrant");
            } else if(x < 0 && y > 0) {
-               System.out.println("As coordenadas se encontram no 2º quadrante");
+               System.out.println("The coordinates are located in the 2nd quadrant");
            } else if(x < 0 && y < 0) {
-               System.out.println("As coordenadas se encontram no 3º quadrante");
+               System.out.println("The coordinates are located in the 3rd quadrant");
            }
            if(x == 0 || y == 0) {
-               System.out.println("Finalizando...");
+               System.out.println("Exiting...");
            }
         }while(x != 0 && y != 0);
     }

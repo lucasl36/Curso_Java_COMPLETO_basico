@@ -11,62 +11,62 @@ import java.util.List;
  */
 public class Exercise_5_37_5 extends Exercise {
 
-    List<ItemCardapio> itens; 
+    List<menuItem> items; 
     
     public Exercise_5_37_5() {
-        super("Exercício mód. 5 aula 37 nro. 5");
-        inicializarItensCardapio();
+        super("Exercise mod. 5 lesson 37 num. 5");
+        initializeMenu();
     }
     
     @Override
     public void execute() {
         boolean repeat = true;
-        int codigo = 0;
-        int quantidade = 0;
+        int code = 0;
+        int quantity = 0;
         do {
-            System.out.println("Cardápio:");
-            exibirItenCardapio();
-            System.out.print("Por favor, informe o código e quantidade do item desejado\n"
-                    + "separados por um espaço:");
-            codigo = Main.sc.nextInt();
-            quantidade = Main.sc.nextInt();
+            System.out.println("Menu:");
+            showMenuItems();
+            System.out.print("Please enter the code and amount of desired items\n"
+                    + "separated by space:");
+            code = Main.sc.nextInt();
+            quantity = Main.sc.nextInt();
             Main.sc.nextLine();
-            if(codigo >= itens.size() || codigo < 0) {
-                System.out.println("Item inválido! Tente novamente...");
-            } else if(quantidade <= 0) {
-                System.out.println("Quantidade inválida! Tente novamente...");
+            if(code >= items.size() || code < 0) {
+                System.out.println("Invalid Item! Try again...");
+            } else if(quantity <= 0) {
+                System.out.println("Invalid amount! Try again...");
             } else {
-                System.out.printf("Total do pedido: R$ %.2f\n", (quantidade*itens.get(codigo-1).valor));
+                System.out.printf("Order total: R$ %.2f\n", (quantity*items.get(code-1).value));
                 repeat = false;
             }
         }while(repeat);
     }
     
-    private class ItemCardapio {
-        public int codigo;
-        public String produto;
-        public double valor;
+    private class menuItem {
+        public int code;
+        public String product;
+        public double value;
         
-        ItemCardapio(int codigo, String produto, double valor) {
-            this.codigo = codigo;
-            this.produto = produto;
-            this.valor = valor;
+        menuItem(int code, String product, double value) {
+            this.code = code;
+            this.product = product;
+            this.value = value;
         }
     }
 
-    private void inicializarItensCardapio() {
-        this.itens = new ArrayList<ItemCardapio>();
-        this.itens.add(new ItemCardapio(1, "Cachorro Quente", 4.0));
-        this.itens.add(new ItemCardapio(2, "X-Salada", 4.5));
-        this.itens.add(new ItemCardapio(3, "X-Bacon", 5.0));
-        this.itens.add(new ItemCardapio(4, "Torrada Simples", 2.0));
-        this.itens.add(new ItemCardapio(5, "Refrigerante", 1.5));
+    private void initializeMenu() {
+        this.items = new ArrayList<menuItem>();
+        this.items.add(new menuItem(1, "Hot dog", 4.0));
+        this.items.add(new menuItem(2, "X-Salad", 4.5));
+        this.items.add(new menuItem(3, "X-Bacon", 5.0));
+        this.items.add(new menuItem(4, "Simple Toast", 2.0));
+        this.items.add(new menuItem(5, "Soda", 1.5));
     }
     
-    private void exibirItenCardapio() {
-        System.out.println("Código - Produto, R$ Preço");
-        for(ItemCardapio item : itens) {
-            System.out.printf("%d - %s, R$ %.2f\n", item.codigo, item.produto, item.valor);
+    private void showMenuItems() {
+        System.out.println("Code - Product, R$ Price");
+        for(menuItem item : items) {
+            System.out.printf("%d - %s, R$ %.2f\n", item.code, item.product, item.value);
         }
     }
     
