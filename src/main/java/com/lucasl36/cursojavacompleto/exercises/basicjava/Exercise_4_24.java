@@ -1,12 +1,10 @@
 package com.lucasl36.cursojavacompleto.exercises.basicjava;
 
-import com.lucasl36.cursojavacompleto.exercises.Exercise;
-
 /**
  *
  * @author Lucas Lopes
  */
-public class Exercise_4_24 extends Exercise {
+public class Exercise_4_24 extends BasicJavaExercise {
 
     public Exercise_4_24() {
         super("Exercise mod. 4 lesson 24");

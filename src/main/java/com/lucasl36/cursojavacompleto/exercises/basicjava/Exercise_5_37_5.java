@@ -1,7 +1,6 @@
 package com.lucasl36.cursojavacompleto.exercises.basicjava;
 
 import com.lucasl36.cursojavacompleto.Main;
-import com.lucasl36.cursojavacompleto.exercises.Exercise;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +8,7 @@ import java.util.List;
  *
  * @author Lucas Lopes
  */
-public class Exercise_5_37_5 extends Exercise {
+public class Exercise_5_37_5 extends BasicJavaExercise {
 
     List<menuItem> items; 
     

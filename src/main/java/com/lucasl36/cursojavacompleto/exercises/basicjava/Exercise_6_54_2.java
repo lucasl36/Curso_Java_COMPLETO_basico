@@ -1,13 +1,12 @@
 package com.lucasl36.cursojavacompleto.exercises.basicjava;
 
 import com.lucasl36.cursojavacompleto.Main;
-import com.lucasl36.cursojavacompleto.exercises.Exercise;
 
 /**
  *
  * @author Lucas Lopes
  */
-public class Exercise_6_54_2 extends Exercise {
+public class Exercise_6_54_2 extends BasicJavaExercise {
     
     private static final int minValue = 10;
     private static final int maxValue = 20;

@@ -1,16 +1,15 @@
 package com.lucasl36.cursojavacompleto.exercises.basicjava;
 
 import com.lucasl36.cursojavacompleto.Main;
-import com.lucasl36.cursojavacompleto.exercises.Exercise;
 
 /**
  *
  * @author Lucas Lopes
  */
-public class Exercise_4_31_6 extends Exercise {
+public class Exercise_4_31_6 extends BasicJavaExercise {
 
     public Exercise_4_31_6() {
-        super("Exercise mod. 4 aula 31 nro. 6");
+        super("Exercise mod. 4 lesson 31 num. 6");
     }
     
     @Override

@@ -2,14 +2,12 @@ package com.lucasl36.cursojavacompleto;
 
 import com.lucasl36.cursojavacompleto.exercises.Exercise;
 import com.lucasl36.cursojavacompleto.exercises.ExercisesList;
+import com.lucasl36.cursojavacompleto.helpers.CollectionsHelper;
 import com.lucasl36.cursojavacompleto.helpers.ReflectionHelper;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.Set;
-import org.reflections.Reflections;
 
 /**
  *
@@ -30,6 +28,7 @@ public class Main {
                 ExercisesList currentExercisesList = selectExercisesList();
                 currentExercisesList.initialize();
                 if(!currentExercisesList.getExerciseList().isEmpty()) {
+                    CollectionsHelper.orderExercisesListByName(currentExercisesList.getExerciseList());
                     selectExercise(currentExercisesList.getExerciseList()).execute();
                 } else {
                     System.out.println("There is no exercises in this list...");
@@ -55,6 +54,7 @@ public class Main {
     private static void initializeExercises() {
         try {
             exercisesLists = ReflectionHelper.initializeExerciseListsUsingReflection();
+            CollectionsHelper.orderExercisesListListByName(exercisesLists);
         } catch(Exception e) {
             System.out.println("Exercises instantiation failed! Error: " + e.getClass().getSimpleName());
             e.printStackTrace();
@@ -63,8 +63,8 @@ public class Main {
     
     private static ExercisesList selectExercisesList() {
         int selectedExercisesList = 0;
-        int index = 0;
         do {
+            int index = 0;
             System.out.println("There are different exercises lists avaiable, see below:");
             for(ExercisesList exercisesList : exercisesLists) {
                 System.out.println(String.valueOf(index+1) + ". " + exercisesList.toString());
@@ -76,14 +76,14 @@ public class Main {
             if(selectedExercisesList <= 0 || selectedExercisesList > exercisesLists.size()) {
                 System.out.println("There is no such exercises list. Please try again...");
             }
-        } while(selectedExercisesList <= 0 && selectedExercisesList > exercisesLists.size());
+        } while(selectedExercisesList <= 0 || selectedExercisesList > exercisesLists.size());
         return exercisesLists.get(selectedExercisesList-1);
     }
     
     private static Exercise selectExercise(List<Exercise> exercises) {
         int selectedExercise = 0;
-        int index = 0;
         do {
+            int index = 0;
             System.out.println("Exercises avaible for execution: ");
             for(Exercise exercise : exercises) {
                 System.out.println(String.valueOf(index+1) + ". " + exercise.toString());
@@ -97,7 +97,7 @@ public class Main {
             }else {
                 System.out.println("Executing exercise...\n");
             }
-        } while(selectedExercise <= 0 && selectedExercise > exercises.size());
+        } while(selectedExercise <= 0 || selectedExercise > exercises.size());
         return exercises.get(selectedExercise-1);
     }
     

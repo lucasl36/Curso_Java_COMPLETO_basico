@@ -15,7 +15,7 @@ public class OOJavaExerciseList extends ExercisesList {
 
     @Override
     public void initialize() throws ReflectiveOperationException {
-        this.setExerciseList(ReflectionHelper.initializeExercisesUsingReflection(this.packagePath));
+        this.setExerciseList(ReflectionHelper.initializeOOJavaExercisesUsingReflection(this.packagePath));
     }
     
 }
