@@ -13,7 +13,7 @@ import org.reflections.Reflections;
  *
  * @author Lucas Lopes
  */
-public class ReflectionHelper {
+public class ReflectionsHelper {
 
     public static List<ExercisesList> initializeExerciseListsUsingReflection() throws ReflectiveOperationException  {
         String defaultPackagePath = "com.lucasl36.cursojavacompleto.exercises";

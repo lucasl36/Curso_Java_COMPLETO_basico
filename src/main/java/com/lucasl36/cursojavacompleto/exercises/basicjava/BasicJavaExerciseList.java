@@ -2,7 +2,7 @@ package com.lucasl36.cursojavacompleto.exercises.basicjava;
 
 import com.lucasl36.cursojavacompleto.exercises.Exercise;
 import com.lucasl36.cursojavacompleto.exercises.ExercisesList;
-import com.lucasl36.cursojavacompleto.helpers.ReflectionHelper;
+import com.lucasl36.cursojavacompleto.helpers.ReflectionsHelper;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class BasicJavaExerciseList extends ExercisesList {
 
     @Override
     public void initialize() throws ReflectiveOperationException {
-        this.setExerciseList(ReflectionHelper.initializeBasicJavaExercisesUsingReflection(this.packagePath));
+        this.setExerciseList(ReflectionsHelper.initializeBasicJavaExercisesUsingReflection(this.packagePath));
     }
     
 }

@@ -3,7 +3,7 @@ package com.lucasl36.cursojavacompleto;
 import com.lucasl36.cursojavacompleto.exercises.Exercise;
 import com.lucasl36.cursojavacompleto.exercises.ExercisesList;
 import com.lucasl36.cursojavacompleto.helpers.CollectionsHelper;
-import com.lucasl36.cursojavacompleto.helpers.ReflectionHelper;
+import com.lucasl36.cursojavacompleto.helpers.ReflectionsHelper;
 
 import java.util.List;
 import java.util.Locale;
@@ -53,7 +53,7 @@ public class Main {
     
     private static void initializeExercises() {
         try {
-            exercisesLists = ReflectionHelper.initializeExerciseListsUsingReflection();
+            exercisesLists = ReflectionsHelper.initializeExerciseListsUsingReflection();
             CollectionsHelper.orderExercisesListListByName(exercisesLists);
         } catch(Exception e) {
             System.out.println("Exercises instantiation failed! Error: " + e.getClass().getSimpleName());

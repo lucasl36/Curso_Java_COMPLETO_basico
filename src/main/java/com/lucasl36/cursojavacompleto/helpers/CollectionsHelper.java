@@ -16,15 +16,15 @@ public class CollectionsHelper {
         Collections.sort(exercisesLists, new AlphabetExercisesListsComparator());
     }
     
-    public static void orderExercisesListByName(List<Exercise> exercisesList) {
-        Collections.sort(exercisesList, new AlphabetExercisesListComparator());
-    }
-    
     private static class AlphabetExercisesListsComparator implements Comparator<ExercisesList> {
         @Override
         public int compare(ExercisesList o1, ExercisesList o2) {
             return o1.getName().compareTo(o2.getName());
         }
+    }
+    
+    public static void orderExercisesListByName(List<Exercise> exercisesList) {
+        Collections.sort(exercisesList, new AlphabetExercisesListComparator());
     }
     
     private static class AlphabetExercisesListComparator implements Comparator<Exercise> {
