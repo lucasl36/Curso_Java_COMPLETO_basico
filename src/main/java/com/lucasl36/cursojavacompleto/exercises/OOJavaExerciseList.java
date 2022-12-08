@@ -1,4 +1,4 @@
-package com.lucasl36.cursojavacompleto.exercises.oojava;
+package com.lucasl36.cursojavacompleto.exercises;
 
 import com.lucasl36.cursojavacompleto.exercises.ExercisesList;
 import com.lucasl36.cursojavacompleto.helpers.ReflectionsHelper;

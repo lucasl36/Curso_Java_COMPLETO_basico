@@ -1,5 +1,6 @@
 package com.lucasl36.cursojavacompleto.exercises.oojava;
 
+import com.lucasl36.cursojavacompleto.exercises.OOJavaExercise;
 import com.lucasl36.cursojavacompleto.Main;
 import com.lucasl36.cursojavacompleto.entities.Employee;
 

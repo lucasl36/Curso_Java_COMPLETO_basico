@@ -1,5 +1,6 @@
 package com.lucasl36.cursojavacompleto.exercises.basicjava;
 
+import com.lucasl36.cursojavacompleto.exercises.BasicJavaExercise;
 import com.lucasl36.cursojavacompleto.Main;
 import java.util.ArrayList;
 import java.util.List;

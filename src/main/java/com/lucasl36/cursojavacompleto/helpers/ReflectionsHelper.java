@@ -2,8 +2,8 @@ package com.lucasl36.cursojavacompleto.helpers;
 
 import com.lucasl36.cursojavacompleto.exercises.Exercise;
 import com.lucasl36.cursojavacompleto.exercises.ExercisesList;
-import com.lucasl36.cursojavacompleto.exercises.basicjava.BasicJavaExercise;
-import com.lucasl36.cursojavacompleto.exercises.oojava.OOJavaExercise;
+import com.lucasl36.cursojavacompleto.exercises.BasicJavaExercise;
+import com.lucasl36.cursojavacompleto.exercises.OOJavaExercise;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;

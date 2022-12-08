@@ -1,5 +1,7 @@
 package com.lucasl36.cursojavacompleto.exercises.basicjava;
 
+import com.lucasl36.cursojavacompleto.exercises.BasicJavaExercise;
+
 /**
  *
  * @author Lucas Lopes

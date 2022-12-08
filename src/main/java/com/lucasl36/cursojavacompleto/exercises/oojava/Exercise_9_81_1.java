@@ -1,5 +1,6 @@
 package com.lucasl36.cursojavacompleto.exercises.oojava;
 
+import com.lucasl36.cursojavacompleto.exercises.OOJavaExercise;
 import com.lucasl36.cursojavacompleto.Main;
 import com.lucasl36.cursojavacompleto.entities.BankAccount;
 
@@ -12,7 +13,7 @@ public class Exercise_9_81_1  extends OOJavaExercise {
     private static final double withdrawFee = 5.0;
     
     public Exercise_9_81_1() {
-        super("Exercise mod. 8 lesson 81 num. 1");
+        super("Exercise mod. 9 lesson 81 num. 1");
     }
     
     @Override
