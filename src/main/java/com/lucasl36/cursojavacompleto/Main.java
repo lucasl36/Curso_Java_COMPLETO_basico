@@ -22,6 +22,7 @@ public class Main {
         Locale.setDefault(Locale.US);
         sc = new Scanner(System.in);
         initializeExercises();
+        System.out.println("Exercises resolution for the course \"Java COMPLETO Programação Orientada a Objetos + Projetos by Nelio Alves\"");
         try {
             boolean repeat = true;
             while(repeat) {
@@ -64,15 +65,19 @@ public class Main {
     private static ExercisesList selectExercisesList() {
         int selectedExercisesList = 0;
         do {
-            int index = 0;
+            int index = 1;
             System.out.println("There are different exercises lists avaiable, see below:");
             for(ExercisesList exercisesList : exercisesLists) {
-                System.out.println(String.valueOf(index+1) + ". " + exercisesList.toString());
+                System.out.println(String.valueOf(index) + ". " + exercisesList.toString());
                 index++;
             }
+            System.out.println(String.valueOf(index) + ". Exit");
             System.out.print("Which one do you want to execute? ");
             selectedExercisesList = sc.nextInt();
             sc.nextLine();
+            if(selectedExercisesList == index) {
+                System.exit(0);
+            }
             if(selectedExercisesList <= 0 || selectedExercisesList > exercisesLists.size()) {
                 System.out.println("There is no such exercises list. Please try again...");
             }

@@ -16,9 +16,9 @@ import org.reflections.Reflections;
 public class ReflectionsHelper {
 
     public static List<ExercisesList> initializeExerciseListsUsingReflection() throws ReflectiveOperationException  {
-        String defaultPackagePath = "com.lucasl36.cursojavacompleto.exercises";
+        String defaultExercisesPackagePath = "com.lucasl36.cursojavacompleto.exercises";
         ArrayList<ExercisesList> exerciseLists = new ArrayList<ExercisesList>();
-        Reflections reflections = new Reflections(defaultPackagePath);
+        Reflections reflections = new Reflections(defaultExercisesPackagePath);
         Set<Class<? extends ExercisesList>> classes = reflections.getSubTypesOf(ExercisesList.class);
         for(Class<? extends ExercisesList> clasz : classes) {
             ExercisesList exerciseList = clasz.getDeclaredConstructor().newInstance(null);
