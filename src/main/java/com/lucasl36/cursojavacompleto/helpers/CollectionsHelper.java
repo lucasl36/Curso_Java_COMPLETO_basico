@@ -24,7 +24,7 @@ public class CollectionsHelper {
     }
     
     public static void orderExercisesListByName(List<Exercise> exercisesList) {
-        Collections.sort(exercisesList, new AlphabetExercisesListComparator());
+        Collections.sort(exercisesList, new ExerciseNumberExercisesListsComparator());
     }
     
     private static class AlphabetExercisesListComparator implements Comparator<Exercise> {
@@ -32,6 +32,25 @@ public class CollectionsHelper {
         public int compare(Exercise o1, Exercise o2) {
             return o1.getName().compareTo(o2.getName());
         }
+    }
+    
+    private static class ExerciseNumberExercisesListsComparator implements Comparator<Exercise> {
+        @Override
+        public int compare(Exercise o1, Exercise o2) {
+            Integer exerciseNumber1 = extractExerciseNumber(o1);
+            Integer exerciseNumber2 = extractExerciseNumber(o2);
+            
+            return exerciseNumber1.compareTo(exerciseNumber2);
+        }
+    } 
+ 
+    private static Integer extractExerciseNumber(Exercise exercise) {
+        String[] exerciseClassNameArr =  exercise.getClass().getSimpleName().split("_");
+        String[] exerciseNumberStrArr = new String[3];
+        for(int index = 0; index < exerciseNumberStrArr.length; index++) {
+            exerciseNumberStrArr[index] = exerciseClassNameArr[index+1];
+        }
+        return Integer.parseInt(String.join("", exerciseNumberStrArr));
     }
     
 }

@@ -77,8 +77,7 @@ public class Main {
             sc.nextLine();
             if(selectedExercisesList == index) {
                 System.exit(0);
-            }
-            if(selectedExercisesList <= 0 || selectedExercisesList > exercisesLists.size()) {
+            } else if(selectedExercisesList <= 0 || selectedExercisesList > exercisesLists.size()) {
                 System.out.println("There is no such exercises list. Please try again...");
             }
         } while(selectedExercisesList <= 0 || selectedExercisesList > exercisesLists.size());

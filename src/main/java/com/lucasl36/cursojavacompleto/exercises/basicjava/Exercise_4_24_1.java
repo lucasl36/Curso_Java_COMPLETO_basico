@@ -6,9 +6,9 @@ import com.lucasl36.cursojavacompleto.exercises.BasicJavaExercise;
  *
  * @author Lucas Lopes
  */
-public class Exercise_4_24 extends BasicJavaExercise {
+public class Exercise_4_24_1 extends BasicJavaExercise {
 
-    public Exercise_4_24() {
+    public Exercise_4_24_1() {
         super("Exercise mod. 4 lesson 24");
     }
     
