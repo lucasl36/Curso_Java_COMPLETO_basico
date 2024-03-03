@@ -16,11 +16,11 @@ public class Room {
         
     public void occupyRoom(Student student) {
         this.student = student;
-        student.setRoom(this.number);
+        student.enterRoom(this);
     }
         
     public void emptyRoom() {
-        student.setRoom(null);
+        student.leaveRoom();
         this.student = null;
     }
         
@@ -31,9 +31,9 @@ public class Room {
     public Integer getNumber() {
         return number;
     }
-
-    public void setNumber(Integer number) {
-        this.number = number;
+    
+    public Student getStudent() {
+        return student;
     }
     
 }

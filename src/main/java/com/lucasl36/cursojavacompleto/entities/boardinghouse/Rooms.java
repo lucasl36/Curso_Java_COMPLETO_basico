@@ -23,6 +23,17 @@ public class Rooms {
         }
     }
         
+    public Room getRoomByNumber(Integer number) {
+        Optional<Room> findedRoom = this.rooms.stream()
+                .filter(room -> room.getNumber() == number)
+                .findFirst();
+        if(findedRoom.isPresent()) {
+            return findedRoom.get();
+        } else {
+            return null;
+        }
+    }
+    
     public Room checkIfAnyRoomIsAvaiable() {
         Optional<Room> findedRoom = rooms.stream()
                 .filter(room -> room.isRoomOccupied() == false)
@@ -43,7 +54,7 @@ public class Rooms {
                 .orElse(false);
     }
         
-    public List<Room> listFilteredRooms(boolean avaiability) {
+    public List<Room> listRoomsByAvaiability(boolean avaiability) {
         List<Room> filteredRooms = this.rooms.stream()
                 .filter(room -> room.isRoomOccupied() == avaiability)
                 .collect(Collectors. toList());

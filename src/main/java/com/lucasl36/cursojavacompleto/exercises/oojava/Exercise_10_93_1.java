@@ -23,7 +23,7 @@ public class Exercise_10_93_1 extends OOJavaExercise {
         try {
             this.boardingHouseRooms = new Rooms(defaultRoomQuantity);
         } catch(Exception e) {
-            System.out.println("Invalid room quantity!");
+            System.out.println("Warning! Invalid room quantity.");
         }
         int option;
         do {
@@ -31,9 +31,8 @@ public class Exercise_10_93_1 extends OOJavaExercise {
             System.out.println("Choose an option:");
             System.out.println("1. Rent a room");
             System.out.println("2. Checkout from room");
-            System.out.println("3. Check for any room availability");
-            System.out.println("4. Check for specific room avaiability");
-            System.out.println("5. List rooms");
+            System.out.println("3. List rooms by avaiability");
+            System.out.println("4. List students by name or email");
             System.out.println("0. Exit");
 
             option = Main.sc.nextInt();
@@ -49,15 +48,11 @@ public class Exercise_10_93_1 extends OOJavaExercise {
                     break;
                 }
                 case 3: {
-                    checkForAnyRoomAvaiability();
+                    listRooms();
                     break;
                 }
                 case 4: {
-                    checkForSpecificRoomAvaiability();
-                    break;
-                }
-                case 5: {
-                    listRooms();
+                    listStudents();
                     break;
                 }
                 case 0: {
@@ -82,11 +77,13 @@ public class Exercise_10_93_1 extends OOJavaExercise {
         String email = Main.sc.nextLine();
         Student newTenant = new Student(name, email);
         do {
-            System.out.println("Any room will do? (Y/N)");
-            
-            List<Room> avaiableRooms = this.boardingHouseRooms.listFilteredRooms(true);
-            System.out.print("Avaible rooms: ");
-            avaiableRooms.stream().forEach(room -> System.out.printf("%d ", room.getNumber()));
+            System.out.println("Any room will do?");
+            // Get first empty room
+            System.out.println("Choose a room from the list:");
+            // List empty rooms
+            System.out.println("Which is the number of the room you want?");
+            // Check if the room informed is occupied (In case the user inputed it without checking the list)
+            // If not occupy the room it has chosen
         }while(true);
     }
     
@@ -94,16 +91,12 @@ public class Exercise_10_93_1 extends OOJavaExercise {
     private void checkoutFromRoom() {
         
     }
-    
-    private void checkForAnyRoomAvaiability() {
-        
-    }
-    
-    private void checkForSpecificRoomAvaiability() {
-        
-    }
-    
+   
     private void listRooms() {
+        
+    }
+    
+    private void listStudents() {
         
     }
     
