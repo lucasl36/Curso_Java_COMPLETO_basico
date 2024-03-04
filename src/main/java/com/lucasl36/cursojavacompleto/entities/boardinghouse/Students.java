@@ -2,6 +2,8 @@ package com.lucasl36.cursojavacompleto.entities.boardinghouse;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,7 +18,17 @@ public class Students {
     public Students() {
         this.students = new ArrayList<>();
     }
-        
+     
+    public List<Student> getStudentsImmutableList() {
+        List<Student> studentsImmutableList = Collections.unmodifiableList(students);
+        Collections.sort(studentsImmutableList, Comparator.comparing(Student::hasARoom));
+        return studentsImmutableList;
+    } 
+    
+    public void registerStudent(Student student) {
+        this.students.add(student);
+    }
+    
     public List<Student> filterStudentsByText(String filteredAttribute, String text) {
         return this.students.stream()
                 .filter(student -> checkIfAttributesTextContains(student, filteredAttribute, text))

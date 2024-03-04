@@ -1,6 +1,7 @@
 package com.lucasl36.cursojavacompleto.entities.boardinghouse;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -23,6 +24,10 @@ public class Rooms {
         }
     }
         
+    public List<Room> getRoomsImmutableList() {
+        return Collections.unmodifiableList(rooms);
+    } 
+    
     public Room getRoomByNumber(Integer number) {
         Optional<Room> findedRoom = this.rooms.stream()
                 .filter(room -> room.getNumber() == number)
@@ -34,7 +39,7 @@ public class Rooms {
         }
     }
     
-    public Room checkIfAnyRoomIsAvaiable() {
+    public Room getFirstEmptyRoom() {
         Optional<Room> findedRoom = rooms.stream()
                 .filter(room -> room.isRoomOccupied() == false)
                 .findAny();

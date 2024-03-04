@@ -24,6 +24,10 @@ public class Student {
         this.room = null;
     }
     
+    public boolean hasARoom() {
+        return room != null;
+    }
+     
     public String getName() {
         return name;
     }
