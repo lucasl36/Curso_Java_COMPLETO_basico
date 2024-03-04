@@ -91,6 +91,7 @@ public class Exercise_10_93_1 extends OOJavaExercise {
             Room firstEmptyRoom = this.rooms.getFirstEmptyRoom();
             firstEmptyRoom.occupyRoom(newTenant);
             this.tenants.registerStudent(newTenant);
+            System.out.printf("You've been assigned to room #%d\n", firstEmptyRoom.getNumber());
             return;
         }
         
@@ -102,13 +103,14 @@ public class Exercise_10_93_1 extends OOJavaExercise {
             System.out.println("Which is the number of the room you want?");
             num = Main.sc.nextInt();
             Main.sc.nextLine();
-            if(!this.rooms.checkIfSpecificRoomIsAvaiable(num)) {
-                System.out.println("Unfortunately, this room is already taken!\nPlease choose another one!");
+            Room chosenRoom = this.rooms.getRoomByNumber(num);
+            if(chosenRoom == null || chosenRoom.isRoomOccupied()) {
+                System.out.println("Unfortunately, this room is unavaiable!\nPlease choose another one!");
             } else {
-                Room chosenRoom = this.rooms.getRoomByNumber(num);
                 chosenRoom.occupyRoom(newTenant);
                 this.tenants.registerStudent(newTenant);
                 emptyRoomChosen = true;
+                System.out.printf("You've been assigned to room #%d\n", chosenRoom.getNumber());
             }
         }
         return;
@@ -116,7 +118,26 @@ public class Exercise_10_93_1 extends OOJavaExercise {
     
     
     private void checkoutFromRoom() {
+        Room chosenRoom = null;
+        System.out.println("Please inform the number of your room:");
+        boolean occupiedRoomChosen = false;
+        while(!occupiedRoomChosen) {
+            
+            Integer num = Main.sc.nextInt();
+            Main.sc.nextLine();
+
+            chosenRoom = this.rooms.getRoomByNumber(num);
+            if(chosenRoom == null || !chosenRoom.isRoomOccupied()) { 
+                System.out.println("Are you sure this is your room?\nThere is no record of this one been rent!");
+                System.out.println("Please, inform another number:");
+            } else {
+                occupiedRoomChosen = true;
+            }
+        }
         
+        chosenRoom.emptyRoom();
+        System.out.println("You've been checked out of your room! Thanks for your stay!");
+        return;
     }
    
     private void listRooms() {

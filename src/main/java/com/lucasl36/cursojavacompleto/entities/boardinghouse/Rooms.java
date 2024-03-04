@@ -50,18 +50,9 @@ public class Rooms {
         }
     }
         
-    public boolean checkIfSpecificRoomIsAvaiable(Integer roomNumber) {
-        return rooms.stream()
-                .filter(room -> room.getNumber() == roomNumber)
-                .findFirst()
-                .map(Room::isRoomOccupied)
-                .map(occupied -> occupied == true)
-                .orElse(false);
-    }
-        
     public List<Room> listRoomsByAvaiability(boolean avaiability) {
         List<Room> filteredRooms = this.rooms.stream()
-                .filter(room -> room.isRoomOccupied() == avaiability)
+                .filter(room -> room.isRoomOccupied() == !avaiability)
                 .collect(Collectors. toList());
         return filteredRooms;
     }

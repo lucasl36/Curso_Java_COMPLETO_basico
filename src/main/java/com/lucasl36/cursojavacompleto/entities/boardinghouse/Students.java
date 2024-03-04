@@ -20,8 +20,9 @@ public class Students {
     }
      
     public List<Student> getStudentsImmutableList() {
-        List<Student> studentsImmutableList = Collections.unmodifiableList(students);
-        Collections.sort(studentsImmutableList, Comparator.comparing(Student::hasARoom));
+        List<Student> unsortedStudentsList = new ArrayList<>(this.students);
+        Collections.sort(unsortedStudentsList, Comparator.comparing(Student::hasARoom));
+        List<Student> studentsImmutableList = Collections.unmodifiableList(unsortedStudentsList);
         return studentsImmutableList;
     } 
     
