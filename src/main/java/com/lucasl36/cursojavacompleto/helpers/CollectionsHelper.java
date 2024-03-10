@@ -37,20 +37,24 @@ public class CollectionsHelper {
     private static class ExerciseNumberExercisesListsComparator implements Comparator<Exercise> {
         @Override
         public int compare(Exercise o1, Exercise o2) {
-            Integer exerciseNumber1 = extractExerciseNumber(o1);
-            Integer exerciseNumber2 = extractExerciseNumber(o2);
-            
-            return exerciseNumber1.compareTo(exerciseNumber2);
+            Integer[] exerciseNumberArr1 = extractExerciseNumberArray(o1);
+            Integer[] exerciseNumberArr2 = extractExerciseNumberArray(o2);
+            for(int i = 0; i < 3; i++) {
+                if(exerciseNumberArr1[i] != exerciseNumberArr2[i]) {                   
+                    return Integer.compare(exerciseNumberArr1[i], exerciseNumberArr2[i]);
+                }
+            }            
+            return 0;
         }
     } 
  
-    private static Integer extractExerciseNumber(Exercise exercise) {
+    private static Integer[] extractExerciseNumberArray(Exercise exercise) {
         String[] exerciseClassNameArr =  exercise.getClass().getSimpleName().split("_");
-        String[] exerciseNumberStrArr = new String[3];
-        for(int index = 0; index < exerciseNumberStrArr.length; index++) {
-            exerciseNumberStrArr[index] = exerciseClassNameArr[index+1];
+        Integer[] exerciseNumberIntArr = new Integer[3];
+        for(int index = 0; index < exerciseNumberIntArr.length; index++) {
+            exerciseNumberIntArr[index] = Integer.parseInt(exerciseClassNameArr[index+1]);
         }
-        return Integer.parseInt(String.join("", exerciseNumberStrArr));
+        return exerciseNumberIntArr;
     }
     
 }
