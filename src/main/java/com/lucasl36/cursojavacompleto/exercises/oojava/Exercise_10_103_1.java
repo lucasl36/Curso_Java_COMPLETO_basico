@@ -33,7 +33,6 @@ public class Exercise_10_103_1 extends OOJavaExercise {
         Integer innerInteger = Main.sc.nextInt();
         Main.sc.nextLine();
         
-        Integer countNegatives = 0;
         for(int index = 0; index < lines; index++) {
             for(int order = 0; order < columns; order++) {
                 if(matrix[index][order].equals(innerInteger)) {

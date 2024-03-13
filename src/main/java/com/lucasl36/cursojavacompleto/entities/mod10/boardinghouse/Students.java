@@ -1,6 +1,5 @@
 package com.lucasl36.cursojavacompleto.entities.mod10.boardinghouse;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
