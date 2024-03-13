@@ -1,8 +1,11 @@
 package com.lucasl36.cursojavacompleto.exercises.oojava;
 
+import com.lucasl36.cursojavacompleto.entities.mod10.boardinghouse.Student;
+import com.lucasl36.cursojavacompleto.entities.mod10.boardinghouse.Room;
+import com.lucasl36.cursojavacompleto.entities.mod10.boardinghouse.Students;
+import com.lucasl36.cursojavacompleto.entities.mod10.boardinghouse.Rooms;
 import com.lucasl36.cursojavacompleto.Main;
 import com.lucasl36.cursojavacompleto.exercises.OOJavaExercise;
-import com.lucasl36.cursojavacompleto.entities.boardinghouse.*;
 import java.util.List;
 
 /**

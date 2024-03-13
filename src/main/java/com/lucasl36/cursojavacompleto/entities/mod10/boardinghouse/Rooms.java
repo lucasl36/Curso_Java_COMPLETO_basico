@@ -1,4 +1,4 @@
-package com.lucasl36.cursojavacompleto.entities.boardinghouse;
+package com.lucasl36.cursojavacompleto.entities.mod10.boardinghouse;
 
 import java.util.ArrayList;
 import java.util.Collections;
