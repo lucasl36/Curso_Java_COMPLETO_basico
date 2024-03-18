@@ -1,10 +1,10 @@
-package com.lucasl36.cursojavacompleto.utils;
+package com.lucasl36.cursojavacompleto.helpers;
 
 /**
  *
  * @author Lucas Lopes
  */
-public class StringUtils {
+public class StringHelper {
     
     public static String getPositionWithSuffix(int position) {
         String posSuffix = position == 1 ? "1st" 

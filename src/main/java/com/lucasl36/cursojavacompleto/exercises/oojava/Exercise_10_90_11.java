@@ -2,7 +2,7 @@ package com.lucasl36.cursojavacompleto.exercises.oojava;
 
 import com.lucasl36.cursojavacompleto.exercises.OOJavaExercise;
 import com.lucasl36.cursojavacompleto.Main;
-import com.lucasl36.cursojavacompleto.utils.StringUtils;
+import com.lucasl36.cursojavacompleto.helpers.StringHelper;
 
 /**
  *
@@ -30,7 +30,7 @@ public class Exercise_10_90_11 extends OOJavaExercise {
         double[] heights = new double[arraySize];
         char[] birthSexes = new char[arraySize];
         for(int i = 0; i < arraySize; i++) {
-            String pos = StringUtils.getPositionWithSuffix(i+1);
+            String pos = StringHelper.getPositionWithSuffix(i+1);
             System.out.print(pos + " person height: ");
             heights[i] = Main.sc.nextDouble();
             Main.sc.nextLine();

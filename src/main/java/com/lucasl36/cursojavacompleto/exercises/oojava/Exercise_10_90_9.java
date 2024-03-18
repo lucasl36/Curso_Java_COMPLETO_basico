@@ -2,7 +2,7 @@ package com.lucasl36.cursojavacompleto.exercises.oojava;
 
 import com.lucasl36.cursojavacompleto.exercises.OOJavaExercise;
 import com.lucasl36.cursojavacompleto.Main;
-import com.lucasl36.cursojavacompleto.utils.StringUtils;
+import com.lucasl36.cursojavacompleto.helpers.StringHelper;
 
 /**
  *
@@ -24,7 +24,7 @@ public class Exercise_10_90_9 extends OOJavaExercise {
         String[] names = new String[arraySize];
         int[] ages = new int[arraySize];
         for(int i = 0; i < arraySize; i++) {
-            String pos = StringUtils.getPositionWithSuffix(i+1);
+            String pos = StringHelper.getPositionWithSuffix(i+1);
             System.out.println(pos + " person data:");
             System.out.print("Name: ");
             names[i] = Main.sc.nextLine();

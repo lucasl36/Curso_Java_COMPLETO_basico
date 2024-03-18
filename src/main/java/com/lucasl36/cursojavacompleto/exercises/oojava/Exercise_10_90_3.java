@@ -3,7 +3,7 @@ package com.lucasl36.cursojavacompleto.exercises.oojava;
 import com.lucasl36.cursojavacompleto.exercises.OOJavaExercise;
 import com.lucasl36.cursojavacompleto.Main;
 import com.lucasl36.cursojavacompleto.entities.Person;
-import com.lucasl36.cursojavacompleto.utils.StringUtils;
+import com.lucasl36.cursojavacompleto.helpers.StringHelper;
 
 /**
  *
@@ -25,7 +25,7 @@ public class Exercise_10_90_3 extends OOJavaExercise {
         int minorsSixteenQty = 0;
         Person persons[] = new Person[personsQty];
         for(int i = 0; i < personsQty; i++) {
-            String indexStr = StringUtils.getPositionWithSuffix(i+1);
+            String indexStr = StringHelper.getPositionWithSuffix(i+1);
             System.out.println("Data of the "+ indexStr +" person:");
             
             System.out.print("Name: ");
