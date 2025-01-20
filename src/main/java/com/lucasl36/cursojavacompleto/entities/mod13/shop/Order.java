@@ -34,7 +34,15 @@ public class Order {
     }
 
     public String toString() {
-        return "Order #" + id + " at " + TimeHelper.dtfBrazilianWithTime.format(moment) + " by " + client.getName() + " - " + status.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("Order #" + id);
+        sb.append(" at " + TimeHelper.dtfBrazilianWithTime.format(moment));
+        sb.append(" by " + client.getName() + " - " + status.toString()+"\n");
+        sb.append("ITEMS:\n");
+        for(OrderItem item : items) {
+            sb.append(item.toString() + "\n");
+        }
+        return sb.toString();
     }
     
     public Integer getId() {

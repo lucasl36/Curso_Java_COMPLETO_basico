@@ -28,7 +28,7 @@ public enum OrderStatus {
             return this.code;
         }
         
-        public OrderStatus toEnum(Object o) throws Exception {
+        public static OrderStatus toEnum(Object o) {
             for(OrderStatus order : OrderStatus.values()) {
                 if(order.getCode().equals(o) || order.toString().equals(o)) {
                     return order;

@@ -7,9 +7,14 @@ import com.lucasl36.cursojavacompleto.entities.mod13.shop.OrderStatus;
 import com.lucasl36.cursojavacompleto.entities.mod13.shop.Product;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.HashMap;
+import java.time.LocalTime;
+import java.time.Month;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 /**
  *
@@ -43,7 +48,7 @@ public class ShopMockDataCreator {
     private static Map<String, Double> mockProductNamesAndPrices = Map.ofEntries(
         Map.entry("Hammer", 39.99),
         Map.entry("Drill", 149.99),
-        Map.entry("Screwdriver", 89.99),
+        Map.entry("Wood drill bit", 4.99),
         Map.entry("Screwdriver", 9.99),
         Map.entry("Wrench", 14.99),
         Map.entry("Circular saw", 129.99),
@@ -64,35 +69,106 @@ public class ShopMockDataCreator {
     );
     
     private static LocalDate getRandomBirth() {
-        return null;
+        Random r = new Random();
+        Integer year = (r.nextInt(125)+1900);
+        Integer month = (r.nextInt(12)+1);
+        LocalDate birthDate = LocalDate.of(year, month, 1);
+        Integer day = (r.nextInt(birthDate.lengthOfMonth())+1);
+        return birthDate.withDayOfMonth(day);
     }
     
     private static Integer getRandomOrderId() {
-        return null;
+        return new Random().nextInt(1001);
     }
     
     private static LocalDateTime getRandomOrderTime() {
-        return null;
+        Random r = new Random();
+        
+        Integer year = (r.nextInt(25)+2000);
+        Integer month = (r.nextInt(12)+1);
+        LocalDate orderDate = LocalDate.of(year, month, 1);
+        Integer day = (r.nextInt(orderDate.lengthOfMonth())+1);
+        
+        Integer hour = (r.nextInt(23)+1);
+        Integer min = (r.nextInt(59)+1);
+        Integer sec = (r.nextInt(59)+1);
+        LocalTime orderTime = LocalTime.of(hour, min, sec);
+        
+        LocalDateTime orderDatetime = LocalDateTime.of(orderDate.withDayOfMonth(day), orderTime);
+        
+        return orderDatetime;
     }
     
     private static OrderStatus getRandomStatus() {
-        return null;
+        Integer statusCode = new Random().nextInt(OrderStatus.values().length);
+        return OrderStatus.toEnum(statusCode);
     }
     
     public static List<Client> createClients(int qtdy) {
-        return null;
+        List<Client> clients = new ArrayList<>();
+        
+        Random r = new Random();
+        Object[] mockClientsKeysObjArr = mockClientNamesAndEmails.keySet().toArray();        
+        String[] mockClientsKeys = Arrays.copyOf(mockClientsKeysObjArr, mockClientsKeysObjArr.length, String[].class);
+        
+        int recursion = 0;
+        do {
+            int index = r.nextInt(mockClientsKeys.length);
+            String name = mockClientsKeys[index];
+            String email = mockClientNamesAndEmails.get(mockClientsKeys[index]);
+            LocalDate birth = getRandomBirth();
+            clients.add(new Client(name, email, birth));
+            recursion++;
+        }while(recursion <= qtdy);
+        
+        return clients;
     }
     
     public static List<Product> createProducts(int qtdy) {
-        return null;
+        List<Product> products = new ArrayList<>();
+        
+        Random r = new Random();
+        Object[] mockProductsKeysObjArr = mockProductNamesAndPrices.keySet().toArray();  
+        String[] mockProductsKeys = Arrays.copyOf(mockProductsKeysObjArr, mockProductsKeysObjArr.length, String[].class);
+        
+        int recursion = 0;
+        do {
+            int index = r.nextInt(mockProductsKeys.length);
+            String name = mockProductsKeys[index];
+            Double price = mockProductNamesAndPrices.get(mockProductsKeys[index]);
+            LocalDate birth = getRandomBirth();
+            products.add(new Product(name, price));
+            recursion++;
+        }while(recursion <= qtdy);
+        
+        return products;
     }
     
-    public static List<Order> createOrders(int qtdy, Client client) {
-        return null;
+    public static List<Order> createOrders(int qtdy, int orderItemsQtdy, Client client, List<Product> products) {
+        List<Order> orders = new ArrayList<>();
+        
+        int recursion = 0;
+        do {
+            int orderId = getRandomOrderId();            
+            orders.add(new Order(orderId, getRandomOrderTime(), getRandomStatus(), client, createOrderItems(orderItemsQtdy, orderId, products)));
+            recursion++;
+        }while(recursion <= qtdy);
+        
+        return orders;
     }
     
-    public static List<OrderItem> createOrderItems(int qtdy, List<Product> products) {
-        return null;
+    private static List<OrderItem> createOrderItems(int qtdy, int orderId, List<Product> products) {
+        List<OrderItem> orderItems = new ArrayList<>();
+        
+        Random r = new Random();
+        int recursion = 0;
+        do {
+            Product randomProduct = products.get(r.nextInt(products.size()));
+            orderItems.add(new OrderItem(qtdy, randomProduct.getPrice(), orderId, randomProduct));
+            recursion++;
+        }while(recursion <= qtdy);
+        
+        return orderItems;
     }
     
 }

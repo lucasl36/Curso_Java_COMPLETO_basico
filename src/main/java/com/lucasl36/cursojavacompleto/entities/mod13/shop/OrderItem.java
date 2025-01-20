@@ -18,6 +18,10 @@ public class OrderItem {
         this.product = product;
     }
 
+    public String toString() {
+        return quantity + "x " + product.getName() + ". TOTAL: " + subTotal();
+    }
+    
     public Integer getQuantity() {
         return quantity;
     }
