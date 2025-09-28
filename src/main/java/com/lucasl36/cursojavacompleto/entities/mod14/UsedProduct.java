@@ -18,7 +18,7 @@ public class UsedProduct extends Product {
 
     @Override
     public String priceTag() {
-        return String.format("%s $ %.2f (Manufactured on %s)", this.name, this.price, TimeHelper.convertLocalDateToString(this.manufacturedDate));
+        return String.format("%s (USED) $ %.2f (Manufactured on %s)", this.name, this.price, TimeHelper.convertLocalDateToString(this.manufacturedDate));
     }
 
     public LocalDate getManufacturedDate() {
