@@ -1,0 +1,108 @@
+Smartphone Galaxy X, 899.90, 45
+Tablet StarPad Pro, 450.00, 32
+Fone de Ouvido Bluetooth NoiseCancel, 199.99, 78
+Smartwatch Series 8, 349.90, 56
+Notebook Gamer Thunder, 2450.00, 12
+Teclado Mecânico RGB, 189.90, 67
+Mouse Gamer 6400DPI, 79.99, 89
+Monitor 27" 4K, 899.00, 23
+SSD 1TB NVMe, 299.90, 54
+Webcam Full HD, 129.99, 41
+Caixa de Som JBL, 159.90, 76
+Roteador Wi-Fi 6, 199.00, 38
+Impressora Laser, 349.90, 19
+HD Externo 2TB, 279.99, 62
+Placa de Vídeo RTX 4070, 2899.00, 8
+Processador Core i7, 1299.90, 15
+Memória RAM 16GB DDR4, 229.90, 84
+Placa-Mãe Z790, 899.00, 22
+Fonte 750W 80Plus, 349.90, 36
+Gabinete Gamer, 189.99, 47
+Headset Wireless, 299.90, 51
+Microfone USB, 199.00, 29
+Tablet Drawing Pro, 599.90, 17
+Smart TV 55" 4K, 1799.00, 14
+Soundbar Dolby Atmos, 699.90, 26
+Console PlayStation 5, 2499.00, 9
+Console Xbox Series X, 2299.00, 11
+Controle Gamepad Pro, 199.90, 63
+Cadeira Gamer Ergonômica, 899.00, 18
+Carregador Wireless, 79.99, 92
+Power Bank 20000mAh, 129.90, 75
+Cabo HDMI 2.1, 49.90, 118
+Dock Station USB-C, 159.00, 42
+Adaptador Bluetooth 5.0, 29.99, 96
+Leitor de Cartão SD, 39.90, 87
+Switch HDMI 4K, 129.00, 34
+Monitor 34" Ultrawide, 1299.90, 16
+Teclado Sem Fio Slim, 139.90, 58
+Mouse Vertical Ergonômico, 159.00, 39
+Hub USB 3.0, 69.90, 73
+Cooler para Notebook, 89.99, 64
+Suporte Monitor Articulado, 199.90, 31
+Webcam 4K Pro, 349.00, 27
+Microfone Condensador, 399.90, 21
+Interface de Áudio USB, 499.00, 19
+Monitor de Vídeo 32", 2499.00, 7
+Stream Deck Mini, 199.90, 44
+Luz Ring LED, 159.00, 52
+Tripé Câmera Profissional, 299.90, 28
+Drone DJI Mini 3, 1299.00, 13
+Action Camera 4K, 599.90, 25
+Smartphone iPhone 15 Pro, 4899.00, 6
+Tablet Samsung S9 Ultra, 3499.00, 8
+Fone de Ouvido AirPods Pro, 899.90, 37
+Smartwatch Apple Watch Ultra, 3299.00, 11
+MacBook Pro 16", 12499.00, 4
+iPad Air 5ª Geração, 3299.00, 16
+Apple Pencil 2ª Geração, 899.00, 29
+Magic Mouse, 499.00, 41
+Magic Keyboard, 799.00, 33
+HomePod Mini, 499.90, 57
+AirTag 4 unidades, 199.00, 68
+Carregador MagSafe, 249.00, 72
+Cabo Thunderbolt 4, 149.90, 85
+Adaptador USB-C para HDMI, 89.90, 79
+Câmera Canon EOS R6, 8899.00, 5
+Lente 50mm f/1.8, 899.00, 24
+Flash Speedlite, 499.90, 31
+Tripé Profissional, 399.00, 26
+Mochila para Notebook, 159.90, 49
+Case Rígida para Câmera, 199.00, 35
+Cartão SD 256GB UHS-II, 199.90, 62
+Bateria Extra para Câmera, 299.00, 44
+Estabilizador Gimbal, 899.90, 21
+Microfone Lapela Sem Fio, 249.00, 53
+Gravador de Áudio Digital, 699.00, 18
+Mixer de Áudio 8 Canais, 1299.00, 12
+Caixa de Som PA 1000W, 1999.00, 9
+Microfone de Mesa, 159.00, 47
+Fone de Ouvido Monitor, 399.90, 36
+Interface MIDI USB, 299.00, 41
+Teclado Controlador 49 Teclas, 599.90, 27
+Monitor de Áudio 5", 799.00, 32
+Cabo XLR 3m, 49.90, 106
+Adaptador P10 para P2, 19.90, 134
+Suporte para Microfone, 89.00, 68
+Filtro Pop, 29.90, 97
+Headphone Fechado Profissional, 599.00, 29
+Mouse Pad XXL, 99.90, 84
+Suporte para Headphone, 79.00, 76
+Cleaner para Eletrônicos, 39.90, 112
+Organizador de Cabos, 24.90, 156
+Protetor de Tomada, 49.00, 93
+Nobreak 1500VA, 899.00, 17
+Stabilizer 2000W, 299.90, 29
+Ventilador USB, 59.90, 108
+Luminária LED USB, 79.00, 87
+Aquecedor Portátil, 129.90, 45
+Umidificador USB, 99.00, 62
+Smart Plug Wi-Fi, 69.90, 78
+Sensor de Movimento, 89.00, 65
+Câmera de Segurança Wi-Fi, 199.90, 42
+Fechadura Digital, 399.00, 28
+Termômetro Digital, 49.90, 91
+Balança Inteligente, 129.00, 57
+Relógio Inteligente Kids, 199.90, 39
+Tablet Infantil, 299.00, 24
+Fone de Ouvido Kids, 79.90, 67
