@@ -16,12 +16,25 @@ public class CourseMockDataCreator {
             Course mock = new Course();
             // Name
             mock.setName(getRandomCoursesName());
-            // Teacher
-            mock.setCoordinator(avaiableTeachers.get(random.nextInt(avaiableTeachers.size())));
+            // Coordinator
+            Teacher teacher = null;
+            while(teacher == null) {
+                Teacher randomTeacher = avaiableTeachers.get(random.nextInt(avaiableTeachers.size()));
+                if(randomTeacher.getCourses().size() < Constants.MAX_COURSES_PER_TEACHER) {
+                    randomTeacher.getCourses().add(mock);
+                    teacher = randomTeacher;
+                }
+            }
+            mock.setCoordinator(teacher);
             // Students
             Set<Student> mockStudents = new HashSet<>();
             for(int j = 0; j < Constants.MAX_STUDENTS_PER_COURSE; j++) {
-                mockStudents.add(avaiableStudents.get(random.nextInt(avaiableStudents.size())));
+                Student randomStudent = avaiableStudents.get(random.nextInt(avaiableStudents.size()));
+                if(!mockStudents.contains(randomStudent) && 
+                        randomStudent.getCourses().size() < Constants.MAX_COURSES_PER_STUDENT) {
+                    randomStudent.getCourses().add(mock);
+                    mockStudents.add(randomStudent);
+                }
             }
             mock.setStudents(new ArrayList<>(mockStudents));
             
@@ -30,8 +43,7 @@ public class CourseMockDataCreator {
         return new ArrayList<>(mockData);
     }
     
-    public static List<Teacher> getMockTeachersData(Integer iterations, List<Course> avaibleCourses) {
-        Random random = new Random();
+    public static List<Teacher> getMockTeachersData(Integer iterations) {
         Set<Teacher> mockData = new HashSet<>();
         for(int i = 0; i < iterations; i++) {
             Teacher mock = new Teacher();
@@ -39,33 +51,20 @@ public class CourseMockDataCreator {
             mock.setRegistration(getRandomRegistration(Constants.DEFAULT_TEACHERS_REGISTRATION_SIZE));
             // Techaer's Name
             mock.setName(getRandomTeachersName());
-            // Courses
-            Set<Course> mockCourses = new HashSet<>();
-            for(int j = 0; j < Constants.MAX_COURSES_PER_TEACHER; j++) {
-                mockCourses.add(avaibleCourses.get(random.nextInt(avaibleCourses.size())));
-            }
-            mock.setCourses(new ArrayList<>(mockCourses));
-             
+            
             mockData.add(mock);
         }
         return new ArrayList<>(mockData);
     }
     
-    public static List<Student> getMockStudentsData(Integer iterations, List<Course> avaibleCourses) {
-        Random random = new Random();
+    public static List<Student> getMockStudentsData(Integer iterations) {
         Set<Student> mockData = new HashSet<>();
         for(int i = 0; i < iterations; i++) {
             Student mock = new Student();
             // Enrollment
             mock.setEnrollment(getRandomEnrollment());
             // Name
-            mock.setName(getRandomName());
-            // Courses
-            Set<Course> mockCourses = new HashSet<>();
-            for(int j = 0; j < Constants.MAX_COURSES_PER_STUDENT; j++) {
-                mockCourses.add(avaibleCourses.get(random.nextInt(avaibleCourses.size())));
-            }
-            mock.setCourses(new ArrayList<>(mockCourses));
+            mock.setName(getRandomName());            
             
             mockData.add(mock);
         }

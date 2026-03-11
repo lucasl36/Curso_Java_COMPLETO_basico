@@ -26,7 +26,22 @@ public class Course {
 
     @Override
     public String toString() {
-        return name + " by " + coordinator.getName();
+        StringBuilder sb = new StringBuilder();
+        sb.append(name + " by " + coordinator.getName());
+        sb.append("\n");
+        if(students.isEmpty()) {
+            sb.append("THERE ARE NO STUDENTS ON THIS COURSE! \n");
+        } else {
+            sb.append("THERE ARE "+ students.size() +" STUDENTS ON THIS COURSE! \n");
+            sb.append("STUDENTS: \n");
+            int i = 1;
+            for(Student student : students) {
+                sb.append(i + student.toString());
+                sb.append("\n");
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
     }
     
     @Override

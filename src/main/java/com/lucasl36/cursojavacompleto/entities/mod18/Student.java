@@ -26,7 +26,16 @@ public class Student {
 
     @Override
     public String toString() {
-        return String.valueOf(enrollment) + " - " + this.name;
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.enrollment);
+        sb.append(": ");
+        sb.append(this.name);
+        sb.append(" (");
+        sb.append("Attending ");
+        sb.append(this.courses.size());
+        sb.append(" courses");
+        sb.append(")");
+        return sb.toString();
     }
     
     @Override

@@ -27,6 +27,16 @@ public class CollectionsHelper {
         Collections.sort(exercisesList, new ExerciseNumberExercisesListsComparator());
     }
     
+    public static void outputObjectsList(List<? extends Object> objectsList) {
+        int i = 1;
+        for(Object o : objectsList) {
+            StringBuilder sb = new StringBuilder();
+            sb.append(i).append(": ").append(o.toString());
+            System.out.println(sb.toString());
+            i++;
+        }
+    }
+    
     private static class AlphabetExercisesListComparator implements Comparator<Exercise> {
         @Override
         public int compare(Exercise o1, Exercise o2) {

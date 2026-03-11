@@ -26,7 +26,16 @@ public class Teacher {
 
     @Override
     public String toString() {
-        return this.registration + " - " + this.name;
+        StringBuilder sb = new StringBuilder();
+        sb.append(this.registration);
+        sb.append(": ");
+        sb.append(this.name);
+        sb.append(" (");
+        sb.append("Coordinator on ");
+        sb.append(this.courses.size());
+        sb.append(" courses");
+        sb.append(")");
+        return sb.toString();
     }
     
     @Override
